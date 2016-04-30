@@ -28,6 +28,7 @@ public class HelloControllerIT {
 
 	private URL base;
 	private RestTemplate template;
+        private final static String greeting ="Greetings from Spring Boot!";
 
 	@Before
 	public void setUp() throws Exception {
@@ -38,6 +39,6 @@ public class HelloControllerIT {
 	@Test
 	public void getHello() throws Exception {
 		ResponseEntity<String> response = template.getForEntity(base.toString(), String.class);
-		assertThat(response.getBody(), equalTo("Greetings from Spring Boot!"));
+		assertThat(response.getBody(), equalTo(greeting));
 	}
 }
