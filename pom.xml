@@ -216,8 +216,8 @@
                 </goals>
             </execution>
         </executions>
-    </plugin>-->
-<plugins>
+    </plugin>
+<plugins>-->
     <!-- JaCoCo code coverage plugin -->
     <plugin>
         <groupId>org.jacoco</groupId>
