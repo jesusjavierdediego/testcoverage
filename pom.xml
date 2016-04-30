@@ -219,46 +219,6 @@
     </plugin>
 <plugins>-->
     <!-- JaCoCo code coverage plugin -->
-    <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-        <version>0.7.1.201405082137</version>
-        <configuration>
-            <propertyName>jacoco.agent.argLine</propertyName>
-            <append>true</append>
-            <formats>
-                <format>html</format>
-                <format>xml</format>
-            </formats>
-        </configuration>
-        <executions>
-            <execution>
-                <id>jacoco-surefire</id>
-                <goals>
-                    <goal>prepare-agent</goal>
-                </goals>
-                <configuration>
-                    <destFile>${sonar.jacoco.reportPath}</destFile>
-                </configuration>
-            </execution>
-            <execution>
-                <id>jacoco-failsafe</id>
-                <goals>
-                    <goal>prepare-agent-integration</goal>
-                </goals>
-                <configuration>
-                    <destFile>${sonar.jacoco.itReportPath}</destFile>
-                </configuration>
-            </execution>
-            <execution>
-                <id>report</id>
-                <phase>prepare-package</phase>
-                <goals>
-                    <goal>report</goal>
-                </goals>
-            </execution>
-        </executions>
-    </plugin>
 
                 </plugins>
             </build>
